@@ -49,7 +49,7 @@ int main() {
 
 	} while(YesNo=='Y');
 	
-	//terminate program
+	// terminate program
 	return 0;
 }
 /*------------output----------------------------------------------------------------------------------
