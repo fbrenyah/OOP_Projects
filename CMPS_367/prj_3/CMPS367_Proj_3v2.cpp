@@ -21,34 +21,33 @@
 #include <string>
 #include <cctype>
 using namespace std;
-int main()
-{
+int main() {
+	
 	//declare identifiers
 	string  state;
 	char	YesNo;
 
-	do{
-		//get state name
+	do {
+		// get state name
 		cout<<"Enter a state name: ";
 		getline(cin, state);
 		
 		int space=state.find(' ');
 
-		//determine if word is one word or two words
-		if(space==-1)
-		{
+		// determine if word is one word or two words
+		if(space==-1) {
+			// space was not found so must be one word state
 			cout<<"\t"<<state<<" or "<<char(toupper(state[0]))<<char(toupper(state[1]))<<endl;
-		}
-		else
-		{
+		} else  {
+			// space was found so must be two word state
 			cout<<"\t"<<state<<" or "<<char(toupper(state[0]))<<char(toupper(state[space+1]))<<endl;
-		}
+		}	
 		cout<<"\tCONTINUE(y/n)? ";
 		cin>>YesNo;
 		cout<<endl;
 		YesNo=toupper(YesNo);
 
-	}while(YesNo=='Y');
+	} while(YesNo=='Y');
 	
 	//terminate program
 	return 0;
